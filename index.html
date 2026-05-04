@@ -448,6 +448,38 @@ h3 { font-size: clamp(1.4rem, 2.2vw, 1.8rem); }
   letter-spacing: 0.005em;
 }
 
+.about-logos {
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid var(--rule);
+}
+.about-logos-label {
+  font-size: 10px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 22px;
+}
+.about-logos-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+.about-logo-img {
+  width: auto;
+  display: block;
+  filter: brightness(0);
+  opacity: 0.55;
+  transition: opacity 0.25s ease;
+}
+.about-logo-img:hover { opacity: 0.85; }
+.about-logo-img.logo-globo { height: 38px; }
+.about-logo-img.logo-oi { height: 32px; }
+.about-logo-img.logo-iga { height: 30px; }
+
 /* ========== AUDIENCE ========== */
 .audience-grid {
   display: grid;
@@ -1273,6 +1305,15 @@ h3 { font-size: clamp(1.4rem, 2.2vw, 1.8rem); }
           <div class="about-creds-item"><span><strong>Engenharia de Produção</strong> &nbsp;·&nbsp; PUCRS</span></div>
           <div class="about-creds-item"><span><strong>Auditora Líder ISO 9001</strong> &nbsp;·&nbsp; BVQI</span></div>
           <div class="about-creds-item"><span><strong>Liderança &amp; Planejamento Estratégico</strong> &nbsp;·&nbsp; PUC-Rio, Globo, IGA Brasil</span></div>
+        </div>
+
+        <div class="about-logos">
+          <span class="about-logos-label">Trajetória executiva</span>
+          <div class="about-logos-row">
+            <img src="logos/globo.svg" alt="Globo" class="about-logo-img logo-globo">
+            <img src="logos/oi.svg" alt="Oi Telecom" class="about-logo-img logo-oi">
+            <img src="logos/iga.png" alt="IGA Brasil" class="about-logo-img logo-iga">
+          </div>
         </div>
       </div>
     </div>
