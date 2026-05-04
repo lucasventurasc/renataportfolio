@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Renata Ventura — Portfólio de Serviços</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1F2A1D;
+    --ink-soft: #3A4A36;
+    --cream: #F5F1E8;
+    --cream-deep: #ECE4D3;
+    --paper: #FAF7F0;
+    --gold: #B08A3E;
+    --gold-soft: #C9A961;
+    --rule: #C7B998;
+    --muted: #6B6859;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  html, body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-size: 10.5pt;
+    line-height: 1.55;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    padding: 22mm 20mm;
+    position: relative;
+    page-break-after: always;
+    overflow: hidden;
+    background: var(--paper);
+  }
+  .page:last-child { page-break-after: auto; }
+
+  .page-number {
+    position: absolute;
+    bottom: 14mm;
+    right: 20mm;
+    font-size: 8pt;
+    letter-spacing: 0.3em;
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  .footer-mark {
+    position: absolute;
+    bottom: 14mm;
+    left: 20mm;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 9pt;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+
+  /* ======================= COVER ======================= */
+  .cover {
+    background:
+      radial-gradient(ellipse at 80% 10%, rgba(176, 138, 62, 0.08) 0%, transparent 55%),
+      linear-gradient(180deg, var(--cream) 0%, var(--cream-deep) 100%);
+    padding: 0;
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+  }
+  .cover-top {
+    padding: 22mm 20mm 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .cover-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 11pt;
+    color: var(--ink-soft);
+    letter-spacing: 0.05em;
+  }
+  .cover-year {
+    font-size: 8.5pt;
+    letter-spacing: 0.4em;
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+  .cover-center {
+    padding: 0 20mm;
+    text-align: left;
+  }
+  .cover-eyebrow {
+    font-size: 9pt;
+    letter-spacing: 0.45em;
+    color: var(--gold);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 18mm;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .cover-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .cover-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    font-size: 86pt;
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 10mm;
+  }
+  .cover-title .ampersand {
+    font-style: italic;
+    color: var(--gold);
+    font-weight: 400;
+  }
+  .cover-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18pt;
+    color: var(--ink-soft);
+    line-height: 1.35;
+    max-width: 130mm;
+    font-weight: 400;
+  }
+  .cover-bottom {
+    padding: 0 20mm 22mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: none;
+  }
+  .cover-bottom-left {
+    border-top: 1px solid var(--rule);
+    padding-top: 6mm;
+    font-size: 9pt;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 500;
+    width: 70mm;
+  }
+  .cover-bottom-right {
+    border-top: 1px solid var(--rule);
+    padding-top: 6mm;
+    font-size: 9pt;
+    color: var(--ink-soft);
+    text-align: right;
+    width: 70mm;
+    line-height: 1.7;
+  }
+  .cover-bottom-right strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 11pt;
+    color: var(--ink);
+  }
+
+  /* ======================= COMMON ======================= */
+  .section-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 14mm;
+    align-items: baseline;
+    margin-bottom: 14mm;
+  }
+  .section-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14pt;
+    color: var(--gold);
+    font-weight: 500;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36pt;
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .section-title em {
+    font-style: italic;
+    color: var(--gold);
+    font-weight: 400;
+  }
+  .section-kicker {
+    font-size: 8.5pt;
+    letter-spacing: 0.4em;
+    color: var(--muted);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 4mm;
+  }
+
+  p { margin-bottom: 4mm; }
+  p.lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15pt;
+    line-height: 1.45;
+    font-weight: 400;
+    color: var(--ink-soft);
+    margin-bottom: 6mm;
+  }
+  p.lead em { font-style: italic; color: var(--gold); }
+
+  .rule {
+    height: 1px;
+    background: var(--rule);
+    width: 100%;
+    margin: 6mm 0;
+  }
+
+  /* ======================= PAGE 2 — VALUE ======================= */
+  .value-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14mm;
+    margin-top: 8mm;
+  }
+  .pull-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 24pt;
+    line-height: 1.2;
+    color: var(--ink);
+    border-left: 2px solid var(--gold);
+    padding: 6mm 0 6mm 8mm;
+    margin: 8mm 0;
+  }
+  .pull-quote .accent { color: var(--gold); font-style: normal; font-weight: 500; }
+
+  .pillars {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8mm;
+    margin-top: 8mm;
+  }
+  .pillar {
+    border-top: 1px solid var(--rule);
+    padding-top: 5mm;
+  }
+  .pillar-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--gold);
+    font-size: 12pt;
+    margin-bottom: 2mm;
+  }
+  .pillar-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16pt;
+    font-weight: 500;
+    line-height: 1.15;
+    margin-bottom: 3mm;
+    color: var(--ink);
+  }
+  .pillar-text {
+    font-size: 9.5pt;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+
+  /* ======================= PAGE 3 — SERVICES ======================= */
+  .services-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6mm 14mm;
+    margin-top: 4mm;
+  }
+  .service {
+    display: grid;
+    grid-template-columns: 14mm 1fr;
+    gap: 4mm;
+    padding: 5mm 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: start;
+  }
+  .service:last-child, .service:nth-last-child(2) { border-bottom: none; }
+  .service-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22pt;
+    color: var(--gold);
+    line-height: 1;
+    font-weight: 500;
+    padding-top: 1mm;
+  }
+  .service-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14pt;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 2mm;
+    line-height: 1.2;
+  }
+  .service-desc {
+    font-size: 9.5pt;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+
+  /* ======================= PAGE 4 — FOR WHOM ======================= */
+  .audience-intro {
+    margin-bottom: 10mm;
+  }
+  .audience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6mm;
+  }
+  .audience-card {
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 8mm 7mm;
+    border-radius: 2px;
+    position: relative;
+  }
+  .audience-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30mm;
+    height: 1px;
+    background: var(--gold);
+  }
+  .audience-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17pt;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 3mm;
+    line-height: 1.15;
+  }
+  .audience-text {
+    font-size: 9.5pt;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+  .audience-callout {
+    margin-top: 12mm;
+    background: var(--ink);
+    color: var(--cream);
+    padding: 8mm 9mm;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8mm;
+    align-items: center;
+    border-radius: 2px;
+  }
+  .audience-callout-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 50pt;
+    color: var(--gold-soft);
+    line-height: 0.8;
+  }
+  .audience-callout-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14pt;
+    line-height: 1.4;
+    color: var(--cream);
+  }
+  .audience-callout-text strong {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--gold-soft);
+  }
+
+  /* ======================= PAGE 5 — PROCESS ======================= */
+  .process {
+    margin-top: 6mm;
+  }
+  .step {
+    display: grid;
+    grid-template-columns: 34mm 1fr;
+    gap: 8mm;
+    padding: 8mm 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: start;
+  }
+  .step:first-of-type { border-top: 1px solid var(--rule); }
+  .step-marker {
+    text-align: left;
+  }
+  .step-roman {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 28pt;
+    color: var(--gold);
+    line-height: 1;
+    font-weight: 500;
+  }
+  .step-label {
+    font-size: 7.5pt;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-top: 3mm;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .step-content { padding-top: 1mm; }
+  .step-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20pt;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 3mm;
+    line-height: 1.15;
+  }
+  .step-text {
+    font-size: 10pt;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    max-width: 130mm;
+  }
+
+  /* ======================= PAGE 6 — CONTACT ======================= */
+  .contact-page {
+    background: linear-gradient(180deg, var(--cream) 0%, var(--cream-deep) 100%);
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+  }
+  .contact-top { padding: 22mm 20mm 0; }
+  .contact-center {
+    padding: 0 20mm;
+  }
+  .contact-eyebrow {
+    font-size: 9pt;
+    letter-spacing: 0.45em;
+    color: var(--gold);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 10mm;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .contact-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .contact-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52pt;
+    line-height: 0.98;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin-bottom: 8mm;
+    font-weight: 500;
+  }
+  .contact-headline em { font-style: italic; color: var(--gold); font-weight: 400; }
+  .contact-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16pt;
+    color: var(--ink-soft);
+    max-width: 140mm;
+    line-height: 1.4;
+    margin-bottom: 14mm;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10mm;
+    border-top: 1px solid var(--rule);
+    padding-top: 8mm;
+  }
+  .contact-block-label {
+    font-size: 8pt;
+    letter-spacing: 0.35em;
+    color: var(--muted);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 3mm;
+  }
+  .contact-block-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16pt;
+    color: var(--ink);
+    font-weight: 500;
+    line-height: 1.35;
+    word-break: keep-all;
+  }
+  .contact-block-value a { color: var(--ink); text-decoration: none; }
+  .contact-block-value.linkedin {
+    font-size: 13pt;
+    letter-spacing: -0.005em;
+  }
+  .contact-bottom {
+    padding: 0 20mm 22mm;
+    align-self: end;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 9pt;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+  .contact-bottom-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 11pt;
+    color: var(--ink-soft);
+  }
+</style>
+</head>
+<body>
+
+<!-- ========================== PAGE 1 — COVER ========================== -->
+<section class="page cover">
+  <div class="cover-top">
+    <div class="cover-mark">Renata Ventura</div>
+    <div class="cover-year">PORTFÓLIO &nbsp;·&nbsp; 2026</div>
+  </div>
+
+  <div class="cover-center">
+    <div class="cover-eyebrow">Serviços Administrativos &amp; Financeiros</div>
+    <h1 class="cover-title">Ordem,<br>clareza<br><span class="ampersand">&amp;</span> tempo<br>de volta.</h1>
+    <p class="cover-subtitle">Gestão administrativa e financeira sob medida para pequenas empresas e profissionais autônomos que querem decidir com base em números — não em achismos.</p>
+  </div>
+
+  <div class="cover-bottom">
+    <div class="cover-bottom-left">
+      Mais de 15 anos<br>em gestão estratégica
+    </div>
+    <div class="cover-bottom-right">
+      <strong>Para quem cuida do que faz bem feito</strong><br>
+      e quer parar de cuidar do resto.
+    </div>
+  </div>
+</section>
+
+<!-- ========================== PAGE 2 — VALUE ========================== -->
+<section class="page">
+  <div class="section-header">
+    <div class="section-num">I.</div>
+    <div>
+      <div class="section-kicker">Proposta de Valor</div>
+      <h2 class="section-title">Para você focar<br>no que <em>só você</em> sabe fazer.</h2>
+    </div>
+  </div>
+
+  <p class="lead">Você abriu seu consultório, sua clínica ou seu negócio para entregar a melhor experiência ao seu cliente — não para passar a noite reconciliando boletos, emitindo nota fiscal ou tentando entender para onde foi o dinheiro do mês.</p>
+
+  <p>Meu trabalho é assumir essa rotina por você, com método, discrição e indicadores claros. Você recebe relatórios objetivos, decisões mais seguras e a tranquilidade de saber que o lado administrativo do seu negócio está em ordem — sem precisar contratar um time interno para isso.</p>
+
+  <div class="pull-quote">
+    Mais de uma década estruturando operações em <span class="accent">grandes empresas</span>, agora a serviço de quem está construindo a sua.
+  </div>
+
+  <div class="pillars">
+    <div class="pillar">
+      <div class="pillar-num">i.</div>
+      <div class="pillar-title">Visão estratégica</div>
+      <div class="pillar-text">Trago para o seu negócio o mesmo rigor de planejamento e gestão por indicadores aplicado em corporações de grande porte.</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">ii.</div>
+      <div class="pillar-title">Execução próxima</div>
+      <div class="pillar-text">Atendimento dedicado, com acompanhamento de perto e comunicação direta — sem camadas, sem ruído, sem retrabalho.</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">iii.</div>
+      <div class="pillar-title">Decisão por dados</div>
+      <div class="pillar-text">Relatórios, indicadores e DRE traduzidos para a sua realidade — clareza para você decidir o que vem a seguir.</div>
+    </div>
+  </div>
+
+  <div class="footer-mark">Renata Ventura · Portfólio</div>
+  <div class="page-number">02</div>
+</section>
+
+<!-- ========================== PAGE 3 — SERVICES ========================== -->
+<section class="page">
+  <div class="section-header">
+    <div class="section-num">II.</div>
+    <div>
+      <div class="section-kicker">Serviços</div>
+      <h2 class="section-title">O que faço <em>por você.</em></h2>
+    </div>
+  </div>
+
+  <p class="lead">Um portfólio de serviços modulares, contratados isoladamente ou em conjunto, conforme a etapa e a necessidade do seu negócio.</p>
+
+  <div class="services-list">
+    <div class="service">
+      <div class="service-num">i.</div>
+      <div>
+        <div class="service-name">Contas a pagar &amp; receber</div>
+        <div class="service-desc">Organização do fluxo de caixa, controle de prazos, conciliação bancária e acompanhamento de inadimplência.</div>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="service-num">ii.</div>
+      <div>
+        <div class="service-name">Emissão de notas fiscais</div>
+        <div class="service-desc">Emissão e organização de NFs e recibos, com arquivo digital estruturado e pronto para a contabilidade.</div>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="service-num">iii.</div>
+      <div>
+        <div class="service-name">Relatórios &amp; indicadores</div>
+        <div class="service-desc">Relatórios mensais com os números que importam: receita, custos, margem e indicadores de desempenho do seu negócio.</div>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="service-num">iv.</div>
+      <div>
+        <div class="service-name">DRE para tomada de decisão</div>
+        <div class="service-desc">Demonstrativo de resultados claro e em linguagem de gestor — para você entender o que dá lucro e o que está pesando.</div>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="service-num">v.</div>
+      <div>
+        <div class="service-name">Organização administrativa</div>
+        <div class="service-desc">Estruturação de rotinas, controle de documentos, contratos, fornecedores e informações operacionais do dia a dia.</div>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="service-num">vi.</div>
+      <div>
+        <div class="service-name">Apoio à gestão</div>
+        <div class="service-desc">Suporte recorrente em decisões financeiras, planejamento orçamentário e implantação de processos sob medida.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-mark">Renata Ventura · Portfólio</div>
+  <div class="page-number">03</div>
+</section>
+
+<!-- ========================== PAGE 4 — FOR WHOM ========================== -->
+<section class="page">
+  <div class="section-header">
+    <div class="section-num">III.</div>
+    <div>
+      <div class="section-kicker">Para quem é</div>
+      <h2 class="section-title">Negócios pequenos<br>com <em>grandes responsabilidades.</em></h2>
+    </div>
+  </div>
+
+  <p class="lead audience-intro">Atendo pequenas empresas e profissionais autônomos que já têm faturamento, mas ainda não têm — ou não precisam ter — uma estrutura administrativa interna.</p>
+
+  <div class="audience-grid">
+    <div class="audience-card">
+      <div class="audience-name">Profissionais da saúde</div>
+      <div class="audience-text">Médicos, dentistas, psicólogos, fisioterapeutas e demais profissionais com consultório próprio, que querem cuidar dos pacientes sem se perder na rotina financeira.</div>
+    </div>
+    <div class="audience-card">
+      <div class="audience-name">Profissionais autônomos</div>
+      <div class="audience-text">Consultores, advogados, arquitetos, designers e prestadores de serviço que faturam como pessoa jurídica e precisam de organização e clareza de números.</div>
+    </div>
+    <div class="audience-card">
+      <div class="audience-name">Pequenas empresas</div>
+      <div class="audience-text">Negócios em fase de estruturação ou crescimento que ainda não justificam um departamento financeiro próprio, mas já não cabem no controle por planilha solta.</div>
+    </div>
+    <div class="audience-card">
+      <div class="audience-name">Empreendedores em transição</div>
+      <div class="audience-text">Quem está abrindo um novo negócio, profissionalizando uma operação familiar ou separando finalmente a vida pessoal das contas da empresa.</div>
+    </div>
+  </div>
+
+  <div class="audience-callout">
+    <div class="audience-callout-mark">&ldquo;</div>
+    <div class="audience-callout-text">Você precisa de alguém em quem confiar para cuidar do <strong>que sustenta</strong> o seu negócio — para que você possa cuidar do que <strong>faz ele crescer.</strong></div>
+  </div>
+
+  <div class="footer-mark">Renata Ventura · Portfólio</div>
+  <div class="page-number">04</div>
+</section>
+
+<!-- ========================== PAGE 5 — PROCESS ========================== -->
+<section class="page">
+  <div class="section-header">
+    <div class="section-num">IV.</div>
+    <div>
+      <div class="section-kicker">Como funciona</div>
+      <h2 class="section-title">Quatro passos<br>até a sua <em>tranquilidade.</em></h2>
+    </div>
+  </div>
+
+  <div class="process">
+    <div class="step">
+      <div class="step-marker">
+        <div class="step-roman">I</div>
+        <div class="step-label">Conversa inicial</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Entender o seu cenário</div>
+        <div class="step-text">Uma conversa sem compromisso para conhecer o seu negócio, sua rotina atual, os pontos que mais incomodam e o que você espera resolver. Aqui eu escuto, você fala — e saímos com um direcionamento claro do que faz sentido.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-marker">
+        <div class="step-roman">II</div>
+        <div class="step-label">Diagnóstico</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Mapear processos e prioridades</div>
+        <div class="step-text">Mergulho nos seus dados, processos e ferramentas atuais para identificar gargalos, riscos e oportunidades. Você recebe um diagnóstico objetivo, com escopo de trabalho, entregas e investimento bem definidos.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-marker">
+        <div class="step-roman">III</div>
+        <div class="step-label">Início do trabalho</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Implantar a nova rotina</div>
+        <div class="step-text">Organização das rotinas combinadas, estruturação de controles, integração com a sua contabilidade e definição dos indicadores que serão acompanhados. Em poucas semanas, sua operação financeira passa a rodar com método.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-marker">
+        <div class="step-roman">IV</div>
+        <div class="step-label">Acompanhamento</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Cuidar continuamente</div>
+        <div class="step-text">Execução das rotinas mensais, relatórios periódicos e reuniões de alinhamento para revisar resultados e direcionar próximos passos. Suporte próximo, com canal direto para dúvidas e decisões do dia a dia.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-mark">Renata Ventura · Portfólio</div>
+  <div class="page-number">05</div>
+</section>
+
+<!-- ========================== PAGE 6 — CONTACT ========================== -->
+<section class="page contact-page">
+  <div class="contact-top">
+    <div class="cover-mark">Renata Ventura</div>
+  </div>
+
+  <div class="contact-center">
+    <div class="contact-eyebrow">Vamos conversar</div>
+    <h2 class="contact-headline">Comece pelo<br>mais <em>simples:</em><br>uma conversa.</h2>
+    <p class="contact-sub">A primeira conversa é sem compromisso. Em até 30 minutos, você sai com clareza sobre o que pode ser organizado e por onde faz sentido começar.</p>
+
+    <div class="contact-grid">
+      <div>
+        <div class="contact-block-label">LinkedIn</div>
+        <div class="contact-block-value linkedin"><a href="https://linkedin.com/in/renata-ventura-9620a731">linkedin.com/in/<br>renata-ventura-9620a731</a></div>
+      </div>
+      <div>
+        <div class="contact-block-label">E-mail &amp; Telefone</div>
+        <div class="contact-block-value">rnventura@hotmail.com<br>+55 (21) 99300-3365</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-bottom">
+    <div class="contact-bottom-mark">— Renata Ventura, 2026</div>
+    <div>RIO DE JANEIRO · BRASIL</div>
+  </div>
+</section>
+
+</body>
+</html>
