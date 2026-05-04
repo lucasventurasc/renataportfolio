@@ -28,7 +28,7 @@ Site estático — sem build step. Cloudflare Pages serve o `index.html` direto.
 
 ## Integrações
 
-- **Calendly** — URL configurada em `index.html` na constante `CALENDLY_URL`
+- **Cal.com** — link `renata-ventura` configurado nos botões via `data-cal-link`. Inicialização no `<head>` do `index.html`.
 - **WhatsApp** — número codificado nos botões `wa.me/5521993003365`
 - **E-mail** — `rnventura@hotmail.com`
 - **Lead magnet** — formulário do checklist envia via `mailto:` (trocar por Mailchimp/ConvertKit em produção)
