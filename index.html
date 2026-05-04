@@ -471,14 +471,14 @@ h3 { font-size: clamp(1.4rem, 2.2vw, 1.8rem); }
 .about-logo-img {
   width: auto;
   display: block;
-  filter: brightness(0);
-  opacity: 0.55;
-  transition: opacity 0.25s ease;
+  opacity: 0.92;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
-.about-logo-img:hover { opacity: 0.85; }
-.about-logo-img.logo-globo { height: 38px; }
-.about-logo-img.logo-oi { height: 32px; }
-.about-logo-img.logo-iga { height: 30px; }
+.about-logo-img:hover { opacity: 1; transform: translateY(-2px); }
+.about-logo-img.logo-globo { height: 56px; }
+.about-logo-img.logo-oi { height: 48px; }
+.about-logo-img.logo-iga { height: 44px; }
+.about-logos-row { gap: 48px; }
 
 /* ========== AUDIENCE ========== */
 .audience-grid {
