@@ -357,6 +357,92 @@ h3 { font-size: clamp(1.4rem, 2.2vw, 1.8rem); }
 }
 .pillar-text { font-size: 0.98rem; color: var(--ink-soft); }
 
+/* ========== ABOUT ========== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 80px;
+  align-items: start;
+}
+@media (max-width: 880px) {
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+.about-photo {
+  position: relative;
+}
+.about-photo-frame {
+  position: relative;
+  display: block;
+}
+.about-photo img {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 24px 60px -30px rgba(31, 42, 29, 0.45);
+  position: relative;
+  z-index: 2;
+}
+.about-photo-frame::after {
+  content: '';
+  position: absolute;
+  inset: 18px -18px -18px 18px;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  z-index: 1;
+}
+.about-photo-caption {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-top: 32px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+.about-text h2 { margin-top: 12px; }
+.about-text .lead {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  color: var(--ink);
+  line-height: 1.4;
+  margin: 32px 0 24px;
+  font-weight: 400;
+}
+.about-text p {
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+.about-creds {
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+  display: grid;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+.about-creds-item {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+}
+.about-creds-item::before {
+  content: '·';
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 0.8;
+}
+.about-creds-item strong {
+  font-weight: 600;
+  color: var(--ink);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.005em;
+}
+
 /* ========== AUDIENCE ========== */
 .audience-grid {
   display: grid;
@@ -1080,6 +1166,7 @@ h3 { font-size: clamp(1.4rem, 2.2vw, 1.8rem); }
     <a href="#top" class="nav-brand">Renata Ventura<span class="dot">.</span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#proposta">Proposta</a></li>
+      <li><a href="#sobre">Sobre</a></li>
       <li><a href="#para-quem">Para quem</a></li>
       <li><a href="#servicos">Serviços</a></li>
       <li><a href="#processo">Como funciona</a></li>
@@ -1112,8 +1199,8 @@ h3 { font-size: clamp(1.4rem, 2.2vw, 1.8rem); }
           <div class="hero-stat-label">primeira conversa gratuita</div>
         </div>
         <div>
-          <div class="hero-stat-num"><em>100%</em></div>
-          <div class="hero-stat-label">atendimento dedicado</div>
+          <div class="hero-stat-num"><em>24h</em></div>
+          <div class="hero-stat-label">resposta garantida</div>
         </div>
       </div>
     </div>
@@ -1160,11 +1247,38 @@ h3 { font-size: clamp(1.4rem, 2.2vw, 1.8rem); }
   </style>
 </section>
 
+<!-- ========== ABOUT / SOBRE A RENATA ========== -->
+<section class="section" id="sobre">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <div class="about-photo-frame">
+          <img src="renata.jpg" alt="Renata Ventura — gestão administrativa e financeira para pequenos negócios">
+        </div>
+        <div class="about-photo-caption">Renata Ventura · Rio de Janeiro</div>
+      </div>
+      <div class="about-text reveal reveal-delay-1">
+        <span class="section-num">II.</span>
+        <div class="eyebrow" style="margin-bottom: 16px;">Sobre a Renata</div>
+        <h2>O que <em>me trouxe</em><br>até aqui.</h2>
+        <p class="lead">São mais de quinze anos liderando operações em grandes empresas — e a mesma coisa em todas elas: transformar processos confusos em rotinas claras e números soltos em decisões assertivas.</p>
+        <p>Coordenei o planejamento estratégico da Diretoria de Transmissão da <strong>Globo</strong>, conduzi projetos de redução de custo na <strong>Oi Telecom</strong> e, nos últimos anos, dirigi unidades do <strong>Instituto Gastronômico das Américas</strong> — posicionando-as no Top 3 Brasil em vendas por semanas consecutivas.</p>
+        <p>Hoje aplico esse mesmo método em uma escala diferente: a do consultório, da clínica, do pequeno escritório. Acredito que o rigor de gestão que move grandes corporações é, justamente, o que falta no negócio de quem decidiu apostar em si mesmo.</p>
+        <div class="about-creds">
+          <div class="about-creds-item"><span><strong>Engenharia de Produção</strong> &nbsp;·&nbsp; PUCRS</span></div>
+          <div class="about-creds-item"><span><strong>Auditora Líder ISO 9001</strong> &nbsp;·&nbsp; BVQI</span></div>
+          <div class="about-creds-item"><span><strong>Liderança &amp; Planejamento Estratégico</strong> &nbsp;·&nbsp; PUC-Rio, Globo, IGA Brasil</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ========== AUDIENCE ========== -->
 <section class="section section--cream" id="para-quem">
   <div class="container">
     <div class="reveal">
-      <span class="section-num">II.</span>
+      <span class="section-num">III.</span>
       <div class="eyebrow" style="margin-bottom: 20px;">Para quem é</div>
       <h2>Negócios pequenos<br>com <em>grandes responsabilidades.</em></h2>
       <p style="max-width: 640px; color: var(--ink-soft); font-size: 1.1rem; margin-top: 16px;">Atendo pequenas empresas e profissionais autônomos que já têm faturamento, mas ainda não têm — ou não precisam ter — uma estrutura administrativa interna.</p>
@@ -1195,7 +1309,7 @@ h3 { font-size: clamp(1.4rem, 2.2vw, 1.8rem); }
 <section class="section" id="servicos">
   <div class="container">
     <div class="reveal">
-      <span class="section-num">III.</span>
+      <span class="section-num">IV.</span>
       <div class="eyebrow" style="margin-bottom: 20px;">Serviços</div>
       <h2>O que faço <em>por você.</em></h2>
       <p style="max-width: 640px; color: var(--ink-soft); font-size: 1.1rem; margin-top: 16px;">Um portfólio de serviços modulares, contratados isoladamente ou em conjunto, conforme a etapa e a necessidade do seu negócio.</p>
@@ -1240,7 +1354,7 @@ h3 { font-size: clamp(1.4rem, 2.2vw, 1.8rem); }
 <section class="section section--ink" id="processo">
   <div class="container">
     <div class="reveal">
-      <span class="section-num" style="color: var(--gold-soft);">IV.</span>
+      <span class="section-num" style="color: var(--gold-soft);">V.</span>
       <div class="eyebrow" style="margin-bottom: 20px; color: var(--gold-soft);">Como funciona</div>
       <h2 style="color: var(--cream);">Quatro passos<br>até a sua <em style="color: var(--gold-soft);">tranquilidade.</em></h2>
     </div>
@@ -1289,7 +1403,7 @@ h3 { font-size: clamp(1.4rem, 2.2vw, 1.8rem); }
 <section class="section diagnostic-section" id="diagnostico">
   <div class="container-narrow">
     <div class="reveal" style="text-align: center;">
-      <span class="section-num">V.</span>
+      <span class="section-num">VI.</span>
       <div class="eyebrow" style="margin-bottom: 20px; justify-content: center; display: inline-flex;">Diagnóstico gratuito</div>
       <h2>A sua gestão está<br><em>realmente em ordem?</em></h2>
       <p style="max-width: 580px; margin: 16px auto 0; color: var(--ink-soft); font-size: 1.05rem;">Responda 6 perguntas em menos de 2 minutos e descubra os pontos que estão custando tempo, dinheiro e tranquilidade no seu negócio.</p>
@@ -1320,17 +1434,11 @@ h3 { font-size: clamp(1.4rem, 2.2vw, 1.8rem); }
   </div>
 </section>
 
-<!-- ========== TESTIMONIAL / LEAD MAGNET ========== -->
+<!-- ========== LEAD MAGNET ========== -->
 <section class="section section--cream">
   <div class="container">
 
-    <div class="testimonial reveal">
-      <div class="testimonial-mark">"</div>
-      <p class="testimonial-quote">Mais de uma década estruturando operações em grandes empresas, agora a serviço de quem está construindo a sua.</p>
-      <p class="testimonial-author">— Renata Ventura</p>
-    </div>
-
-    <div class="lead-magnet reveal" style="margin-top: 80px;">
+    <div class="lead-magnet reveal">
       <div>
         <div class="lead-magnet-eyebrow">Material gratuito</div>
         <h3>10 sinais de que sua gestão financeira <em>precisa de ajuda.</em></h3>
@@ -1364,7 +1472,7 @@ h3 { font-size: clamp(1.4rem, 2.2vw, 1.8rem); }
 <section class="section" id="faq">
   <div class="container">
     <div class="reveal" style="text-align: center;">
-      <span class="section-num">VI.</span>
+      <span class="section-num">VII.</span>
       <div class="eyebrow" style="margin-bottom: 20px; justify-content: center; display: inline-flex;">Perguntas frequentes</div>
       <h2>Antes da <em>primeira conversa.</em></h2>
     </div>
