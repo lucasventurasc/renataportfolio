@@ -15,11 +15,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Cal.com embed -->
+<!-- Cal.com embed (global, no namespace) -->
 <script>
 (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "Cal");
-Cal("init", "conversa", {origin:"https://app.cal.com"});
-Cal.ns.conversa("ui", {
+Cal("init", {origin: "https://app.cal.com"});
+Cal("ui", {
   theme: "light",
   cssVarsPerTheme: {
     light: { "cal-brand": "#1F2A1D", "cal-text": "#1F2A1D", "cal-bg": "#FAF7F0" }
@@ -1208,7 +1208,7 @@ h3 { font-size: clamp(1.4rem, 2.2vw, 1.8rem); }
       <li><a href="#servicos">Serviços</a></li>
       <li><a href="#processo">Como funciona</a></li>
       <li><a href="#diagnostico">Diagnóstico</a></li>
-      <li><button data-cal-link="renata-ventura" data-cal-namespace="conversa" data-cal-config='{"layout":"month_view"}' class="nav-cta" style="cursor:pointer;border:none;font-family:inherit;">Agendar conversa</button></li>
+      <li><button data-cal-link="renata-ventura" data-cal-config='{"layout":"month_view"}' class="nav-cta" style="cursor:pointer;border:none;font-family:inherit;">Agendar conversa</button></li>
     </ul>
     <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">≡</button>
   </div>
@@ -1222,7 +1222,7 @@ h3 { font-size: clamp(1.4rem, 2.2vw, 1.8rem); }
       <h1 class="reveal reveal-delay-1">Ordem,<br>clareza<br><em>&amp;</em> tempo<br>de volta.</h1>
       <p class="hero-sub reveal reveal-delay-2">Gestão administrativa e financeira sob medida para pequenas empresas e profissionais autônomos que querem decidir com base em números — não em achismos.</p>
       <div class="hero-ctas reveal reveal-delay-3">
-        <button data-cal-link="renata-ventura" data-cal-namespace="conversa" data-cal-config='{"layout":"month_view"}' class="btn btn-primary">Agendar uma conversa <span class="arrow">→</span></button>
+        <button data-cal-link="renata-ventura" data-cal-config='{"layout":"month_view"}' class="btn btn-primary">Agendar uma conversa <span class="arrow">→</span></button>
         <a href="#diagnostico" class="btn btn-secondary">Fazer diagnóstico gratuito</a>
       </div>
 
@@ -1589,7 +1589,7 @@ h3 { font-size: clamp(1.4rem, 2.2vw, 1.8rem); }
     <h2>Comece pelo<br>mais <em>simples:</em><br>uma conversa.</h2>
     <p>A primeira conversa é sem compromisso. Em até 30 minutos, você sai com clareza sobre o que pode ser organizado e por onde faz sentido começar.</p>
     <div class="hero-ctas">
-      <button data-cal-link="renata-ventura" data-cal-namespace="conversa" data-cal-config='{"layout":"month_view"}' class="btn btn-primary">Escolher horário no calendário <span class="arrow">→</span></button>
+      <button data-cal-link="renata-ventura" data-cal-config='{"layout":"month_view"}' class="btn btn-primary">Escolher horário no calendário <span class="arrow">→</span></button>
       <a href="https://wa.me/5521993003365?text=Ol%C3%A1%2C%20Renata!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20a%20conversa%20inicial." class="btn btn-whatsapp" target="_blank" rel="noopener">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.71 5.557l-.6 2.18 2.243-.582z"/></svg>
         WhatsApp
