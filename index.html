@@ -1759,15 +1759,27 @@ h3 { font-size: clamp(1.4rem, 2.2vw, 1.8rem); }
     border-color: var(--ink);
     transform: scale(1.03);
   }
-  .investment-card--featured .investment-tag,
+  .investment-card--featured .investment-tag {
+    color: var(--gold-soft);
+  }
   .investment-card--featured .investment-period,
   .investment-card--featured .investment-for {
-    color: rgba(245, 241, 232, 0.7);
+    color: rgba(245, 241, 232, 0.92);
   }
   .investment-card--featured .investment-name { color: var(--cream); }
-  .investment-card--featured ul li { color: rgba(245, 241, 232, 0.92); }
-  .investment-card--featured .investment-price { color: rgba(245, 241, 232, 0.85); }
+  .investment-card--featured ul {
+    color: var(--cream);
+  }
+  .investment-card--featured ul li { color: var(--cream); }
+  .investment-card--featured .investment-price { color: var(--cream); }
   .investment-card--featured .investment-price em { color: var(--gold-soft); }
+  .investment-card--featured .investment-period {
+    border-bottom-color: rgba(245, 241, 232, 0.18);
+  }
+  .investment-card--featured .investment-for {
+    border-top-color: rgba(245, 241, 232, 0.18);
+    font-style: italic;
+  }
   .investment-badge {
     position: absolute;
     top: -12px;
