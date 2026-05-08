@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checklist: 10 sinais de alerta na gestão financeira do seu negócio | Renata Ventura</title>
+<meta name="description" content="Checklist objetivo para identificar onde a gestão financeira do seu pequeno negócio está silenciosamente fazendo você perder dinheiro e tempo.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/renata.jpg" type="image/jpeg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #1F2A1D;
+    --ink-soft: #3A4A36;
+    --cream: #F5F1E8;
+    --cream-deep: #ECE4D3;
+    --paper: #FAF7F0;
+    --gold: #B08A3E;
+    --gold-soft: #C9A961;
+    --rule: #C7B998;
+    --muted: #6B6859;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .pdf-toolbar {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .pdf-toolbar a {
+    color: var(--gold-soft);
+    text-decoration: none;
+    border: 1px solid var(--gold-soft);
+    padding: 6px 14px;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    transition: all 0.2s ease;
+  }
+  .pdf-toolbar a:hover {
+    background: var(--gold-soft);
+    color: var(--ink);
+  }
+  .pdf-toolbar-tip {
+    color: rgba(245, 241, 232, 0.7);
+    font-size: 0.78rem;
+  }
+
+  .doc {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 64px 56px;
+    background: var(--paper);
+  }
+
+  .doc-header {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 32px;
+    margin-bottom: 48px;
+  }
+  .doc-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+  .doc-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 44px;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    font-weight: 500;
+    margin-bottom: 18px;
+  }
+  .doc-title em { font-style: italic; color: var(--gold); }
+  .doc-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+  .doc-meta {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+    font-size: 0.82rem;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+
+  .intro {
+    background: var(--cream);
+    border-left: 3px solid var(--gold);
+    padding: 24px 28px;
+    margin-bottom: 48px;
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+  }
+  .intro p { margin-bottom: 12px; }
+  .intro p:last-child { margin-bottom: 0; }
+
+  .signal {
+    margin-bottom: 36px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--rule);
+    page-break-inside: avoid;
+  }
+  .signal:last-of-type { border-bottom: none; }
+  .signal-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+  .signal-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 500;
+    flex-shrink: 0;
+    width: 50px;
+  }
+  .signal-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    line-height: 1.2;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .signal-body {
+    margin-left: 66px;
+    color: var(--ink-soft);
+    line-height: 1.65;
+  }
+  .signal-check {
+    margin-top: 14px;
+    padding: 12px 16px;
+    background: var(--cream-deep);
+    border-radius: 2px;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+  .signal-check::before {
+    content: "□  ";
+    font-size: 1.1rem;
+    color: var(--gold);
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .closing {
+    margin-top: 64px;
+    padding: 40px 36px;
+    background: var(--ink);
+    color: var(--cream);
+    border-radius: 2px;
+    page-break-inside: avoid;
+  }
+  .closing-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .closing h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    line-height: 1.2;
+    color: var(--cream);
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+  .closing h3 em { color: var(--gold-soft); font-style: italic; }
+  .closing p {
+    color: rgba(245, 241, 232, 0.85);
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+  .closing-cta {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--ink);
+    padding: 14px 28px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.92rem;
+    letter-spacing: 0.04em;
+    border-radius: 2px;
+    transition: background 0.2s ease;
+  }
+  .closing-cta:hover { background: var(--gold-soft); }
+
+  .doc-footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+  .doc-footer strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--ink);
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  @media (max-width: 720px) {
+    .doc { padding: 32px 24px; }
+    .doc-title { font-size: 32px; }
+    .signal-body { margin-left: 0; }
+    .signal-num { font-size: 22px; width: auto; }
+    .signal-title { font-size: 19px; }
+  }
+
+  @media print {
+    .pdf-toolbar { display: none; }
+    body { background: white; font-size: 11pt; }
+    .doc { padding: 24px; max-width: none; }
+    .doc-title { font-size: 28pt; }
+    .signal { page-break-inside: avoid; }
+    .closing { page-break-inside: avoid; }
+    a { color: var(--ink); text-decoration: none; }
+    .closing a { color: var(--gold-soft); }
+  }
+</style>
+</head>
+<body>
+
+<div class="pdf-toolbar">
+  <span class="pdf-toolbar-tip">Para salvar como PDF: Ctrl/Cmd + P → "Salvar como PDF"</span>
+  <a href="/">← Voltar ao site</a>
+</div>
+
+<article class="doc">
+
+  <header class="doc-header">
+    <div class="doc-eyebrow">Checklist · Material gratuito</div>
+    <h1 class="doc-title">10 sinais de que sua<br>gestão financeira <em>precisa de ajuda</em>.</h1>
+    <p class="doc-sub">Um diagnóstico honesto, em 5 minutos. Marque os que se aplicam ao seu negócio hoje.</p>
+    <div class="doc-meta">
+      <span>Renata Ventura</span>
+      <span>·</span>
+      <span>renatanventura.com.br</span>
+    </div>
+  </header>
+
+  <div class="intro">
+    <p><strong>Como usar:</strong> leia cada sinal com calma. Se o quadradinho azul descrever a sua realidade hoje, marque mentalmente.</p>
+    <p>No final, conte quantos marcou. <strong>3 ou mais</strong> já é um aviso amarelo. <strong>5 ou mais</strong>: vermelho piscando. Não é sentença, é diagnóstico, e diagnóstico é o primeiro passo de qualquer plano.</p>
+  </div>
+
+  <section class="signal">
+    <div class="signal-header">
+      <div class="signal-num">01</div>
+      <h2 class="signal-title">Você não sabe seu lucro do mês passado.</h2>
+    </div>
+    <div class="signal-body">
+      <p>Não tem como tomar decisão sem saber se sobrou ou faltou. Faturamento na conta engana, porque dentro dele está dinheiro que ainda vai sair, imposto, fornecedor, salário, parcela. Lucro real é o que sobra <em>depois de tudo</em>. Se você precisa abrir 3 planilhas pra calcular, é o mesmo que não saber.</p>
+      <div class="signal-check">Se eu te perguntasse agora "quanto sobrou em dinheiro mês passado?", você responderia em até 30 segundos?</div>
+    </div>
+  </section>
+
+  <section class="signal">
+    <div class="signal-header">
+      <div class="signal-num">02</div>
+      <h2 class="signal-title">Mistura conta pessoal com a da empresa.</h2>
+    </div>
+    <div class="signal-body">
+      <p>Compra mantimento no cartão da PJ, paga conta de luz pessoal pelo Pix da empresa, tira "um troco" do caixa pra abastecer o carro. Cada movimento isolado parece pequeno, mas eles destroem a leitura do caixa, prejudicam crédito e mascaram o lucro real. 62% dos donos brasileiros fazem isso (Ceape Brasil).</p>
+      <div class="signal-check">Você consegue olhar o extrato da PJ e cada lançamento ali é claramente da empresa, sem exceção?</div>
+    </div>
+  </section>
+
+  <section class="signal">
+    <div class="signal-header">
+      <div class="signal-num">03</div>
+      <h2 class="signal-title">Atrasa a emissão de notas fiscais.</h2>
+    </div>
+    <div class="signal-body">
+      <p>Vendeu, recebeu, mas a nota só sai dias depois, ou só quando o cliente cobra. Atraso de NF significa receita não reconhecida, imposto pago errado, problema com fornecedor que precisa da sua nota e risco com o fisco. Não é detalhe burocrático: é controle.</p>
+      <div class="signal-check">Você tem rotina semanal de emissão de notas fiscais? Sabe quantas estão pendentes agora?</div>
+    </div>
+  </section>
+
+  <section class="signal">
+    <div class="signal-header">
+      <div class="signal-num">04</div>
+      <h2 class="signal-title">Não tem fluxo de caixa atualizado semanalmente.</h2>
+    </div>
+    <div class="signal-body">
+      <p>Fluxo de caixa não é planilha sofisticada, é registro de entradas e saídas com saldo final. Sem ele, você reage. Com ele, você decide. Atualizar uma vez por mês é tarde demais. Diário é exagero. Semanal é o ponto certo.</p>
+      <div class="signal-check">Você sabe agora quanto dinheiro vai entrar e sair nos próximos 30 dias?</div>
+    </div>
+  </section>
+
+  <section class="signal">
+    <div class="signal-header">
+      <div class="signal-num">05</div>
+      <h2 class="signal-title">Decide "no feeling", sem olhar números.</h2>
+    </div>
+    <div class="signal-body">
+      <p>Contratar. Demitir. Aumentar o aluguel. Comprar equipamento. Reajustar preço. Toda decisão importante deveria ser sustentada por dado, não por sensação do final de semana. Feeling é experiência sintetizada, mas só vale quando complementa o número, nunca quando substitui.</p>
+      <div class="signal-check">Sua última decisão grande foi tomada com base em qual indicador específico?</div>
+    </div>
+  </section>
+
+  <section class="signal">
+    <div class="signal-header">
+      <div class="signal-num">06</div>
+      <h2 class="signal-title">Não conhece o custo real de cada serviço ou produto.</h2>
+    </div>
+    <div class="signal-body">
+      <p>Você sabe quanto cobra. Mas sabe quanto custa, de verdade, entregar? Custo direto + custo indireto rateado + sua hora + impostos. Sem esse cálculo, sua precificação é palpite. E precificação errada é o tipo de erro que sangra todos os meses sem aparecer.</p>
+      <div class="signal-check">Você consegue dizer o custo real (não o preço) do seu produto/serviço mais vendido?</div>
+    </div>
+  </section>
+
+  <section class="signal">
+    <div class="signal-header">
+      <div class="signal-num">07</div>
+      <h2 class="signal-title">Está no regime tributário errado e não sabe.</h2>
+    </div>
+    <div class="signal-body">
+      <p>MEI, Simples Nacional, Lucro Presumido. Cada regime tem alíquota efetiva diferente conforme seu mix de receita e folha. Profissional de saúde no Anexo V do Simples paga até 9 pontos percentuais a mais que no Anexo III via Fator R. Se ninguém revisou seu regime no último ano, é provável que esteja pagando demais.</p>
+      <div class="signal-check">Quando foi a última vez que seu contador comparou os regimes possíveis pro seu caso?</div>
+    </div>
+  </section>
+
+  <section class="signal">
+    <div class="signal-header">
+      <div class="signal-num">08</div>
+      <h2 class="signal-title">Não tem reserva de emergência da empresa.</h2>
+    </div>
+    <div class="signal-body">
+      <p>Reserva ideal: 3 a 6 meses de custo fixo. 78% dos pequenos empresários não têm. Resultado: qualquer crise vira capital de giro tomado a juros altos, ou demissão apressada, ou venda forçada de equipamento. Reserva é o oxigênio que separa susto de desastre.</p>
+      <div class="signal-check">Quantos meses sua empresa sobreviveria com receita zero a partir de hoje?</div>
+    </div>
+  </section>
+
+  <section class="signal">
+    <div class="signal-header">
+      <div class="signal-num">09</div>
+      <h2 class="signal-title">Cliente atrasa pagamento e ninguém cobra com método.</h2>
+    </div>
+    <div class="signal-body">
+      <p>Cobrança vira "lembrança" pessoal, no impulso, no constrangimento. Sem régua escrita (D+1, D+5, D+10, D+15, D+30), você perde dinheiro pra cliente que paga mais tarde só porque pode. Cobrança boa é processo, não confronto.</p>
+      <div class="signal-check">Você tem uma régua de cobrança escrita que QUALQUER pessoa do seu time consegue executar?</div>
+    </div>
+  </section>
+
+  <section class="signal">
+    <div class="signal-header">
+      <div class="signal-num">10</div>
+      <h2 class="signal-title">Você trabalha mais de 50 horas por semana há mais de 6 meses.</h2>
+    </div>
+    <div class="signal-body">
+      <p>Não é resiliência, é sintoma. 78% dos pequenos empresários brasileiros estão nesse ritmo (Fundação Dom Cabral). Significa que o negócio depende fisicamente de você. Quando você é o gargalo, o negócio para de crescer no momento em que você cansa. E você sempre cansa.</p>
+      <div class="signal-check">Se você tirasse 30 dias de férias HOJE, sua empresa funcionaria normalmente?</div>
+    </div>
+  </section>
+
+  <div class="closing">
+    <div class="closing-eyebrow">E agora?</div>
+    <h3>Marcou <em>3 ou mais</em>?<br>Vamos conversar 20 minutos.</h3>
+    <p>Não é venda, é uma conversa. Em 20 minutos, eu te ajudo a entender por onde faz sentido começar, mesmo que você decida fazer sozinha depois. Conversa gratuita, sem fórmula de venda.</p>
+    <a href="https://cal.com/renata-ventura-a87qj8" target="_blank" rel="noopener" class="closing-cta">Agendar conversa de 20 min →</a>
+  </div>
+
+  <footer class="doc-footer">
+    <p><strong>Renata Ventura</strong></p>
+    <p>Consultoria de gestão administrativa e financeira para pequenos negócios.<br>
+    Engenheira de Produção · Globo · Tim · Oi · IGA Brasil.</p>
+    <p style="margin-top: 12px;">
+      <a href="https://renatanventura.com.br" style="color: var(--gold);">renatanventura.com.br</a> ·
+      <a href="mailto:venturanrenata@gmail.com" style="color: var(--gold);">venturanrenata@gmail.com</a>
+    </p>
+  </footer>
+
+</article>
+
+</body>
+</html>
