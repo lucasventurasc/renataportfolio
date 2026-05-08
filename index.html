@@ -381,10 +381,22 @@ h3 { font-size: clamp(1.4rem, 2.2vw, 1.8rem); }
 .btn .arrow { transition: transform 0.2s ease; }
 .btn:hover .arrow { transform: translateX(4px); }
 
+.hero-cta-note {
+  margin-top: 18px;
+  font-size: 0.88rem;
+  color: var(--muted);
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
+.hero-cta-note strong {
+  color: var(--ink);
+  font-weight: 600;
+  font-style: normal;
+}
 .hero-stats {
   display: flex;
-  gap: 48px;
-  margin-top: 80px;
+  gap: 40px;
+  margin-top: 72px;
   padding-top: 32px;
   border-top: 1px solid var(--rule);
   flex-wrap: wrap;
@@ -1321,11 +1333,16 @@ h3 { font-size: clamp(1.4rem, 2.2vw, 1.8rem); }
         <button data-cal-link="renata-ventura-a87qj8" data-cal-config='{"layout":"month_view"}' class="btn btn-primary">Conversa de 20 min, sem compromisso <span class="arrow">→</span></button>
         <a href="#diagnostico" class="btn btn-secondary">Diagnóstico gratuito (5 min)</a>
       </div>
+      <p class="hero-cta-note reveal reveal-delay-3">Primeira conversa <strong>gratuita</strong> — sem fórmula de venda, sem compromisso.</p>
 
       <div class="hero-stats reveal reveal-delay-3">
         <div>
           <div class="hero-stat-num">+<em>15</em> anos</div>
           <div class="hero-stat-label">em multinacionais</div>
+        </div>
+        <div>
+          <div class="hero-stat-num"><em>20</em> min</div>
+          <div class="hero-stat-label">primeira conversa gratuita</div>
         </div>
         <div>
           <div class="hero-stat-num"><em>3</em> vagas</div>
