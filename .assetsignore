@@ -1,8 +1,7 @@
 # Files in the repo that should NOT be served by Cloudflare Workers.
 # Syntax mirrors .gitignore.
 
-# Internal working documents — kept in git for reference, not for the public.
-instagram/
+# Internal working documents
 blog/_brief.md
 
 # Repo metadata
